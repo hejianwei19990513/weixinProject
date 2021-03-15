@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- wx:if,  wx:elif 和   wx:else 的运用 -->
+  <view wx:if="{{type === 1}}">男</view>
+  <view wx:elif="{{type === 2}}">女</view>
+  <view wx:else>保密</view>
+
+  data: {
+    type: 3
+  },
+</body>
+
+</html>

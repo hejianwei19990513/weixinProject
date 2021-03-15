@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  1.内嵌wxs脚本
+  传智播客197662
+  wxs代码可以编写在wxml文件中的<wxS>标签内，就像Javascript代码可以编写在html文件中的<!-- <script> -->标签内一样。
+  wxml文件中的每个 <!-- < wxS ></wxS > --> 标签，必须提供 module属性，用来指定当前wxs的模块名称，方便在wxml中访问模块中的成员:
+  <view>{{m1.toUpper(username)}}</view>
+  <wxs module="m1">
+  /将文本转为大写形式zS ->zS
+  module.exports.toUpper = function(str) {
+      return str.toUpperCase()
+  }
+  </wxs>
+  
+</body >
+</html >

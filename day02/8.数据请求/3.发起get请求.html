@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  3.发起GET请求
+  调用微信小程序提供的wx.request()方法，可以发起GET数据请求，示例代码如下:
+  <script>
+    wx.request({
+      url: 'https :/ /www.escook.cn/api/get',// 请求的接口地址，必须基于 https协议method: 'GET',
+      //请求的方式
+      data: {
+        //发送到服务器的数据
+        name: 'zs',
+        age: 22
+      },
+      success: (res) => {
+        // 请求成功之后的回调函数
+        console.log(res)
+      }
+    })
+  </script>
+
+
+</body>
+
+</html>

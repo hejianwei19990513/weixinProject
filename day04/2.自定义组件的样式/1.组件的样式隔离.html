@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  1。组件样式隔离
+  默认情况下，自定义组件的样式只对当前组件生效，不会影响到组件之外的UI结构，
+  <!-- 组件A的样式不会影响组件C的样式 -->
+  <!-- 组件A的样式不会影响小程序页面的样式 -->
+  <!-- 小程序页面的样式不会影响组件A和C的样式 -->
+  好处:
+  防止外界的样式影响组件内部的样式
+  防止组件的样式破坏外界的样式
+
+  2.组件样式隔离的注意点
+  <!-- app.wxss中的全局样式对组件无效 -->
+  <!-- ·只有class选择器会有样式隔离效果，id 选择器、属性选择器、标签选择器不受样式隔离的影响 -->
+
+  建议:在组件和引用组件的页面中
+  <!-- 建议使用class选择器 -->，不要使用id、属性、标签选择器!
+
+
+  3.修改组件的样式隔离选项
+  默认情况下，自定义组件的样式隔离特性能够防止组件内外样式互相干扰的问题。但有时，我们希望在外界能够控制组件内部的样式，此时，可以通过stylelsolation修改组件的样式隔离选项
+  用法如下:
+  在组件的.js文件中新增如下配置
+  Component( {
+    options: {
+      styleisolation: 'isolated'
+    } 
+  })
+  或在组件的.json文件中新增如下配置{
+  "stylelsolation" : "isolated"
+    
+</body>
+
+</html>

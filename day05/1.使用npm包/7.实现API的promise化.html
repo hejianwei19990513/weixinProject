@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  3.实现API Promise 化
+  在小程序中，实现APl Promise 化主要依赖于miniprogram-api-promise这个第三方的npm包。它的安装和使用步骤如下:
+  <!-- npm install --save miniprogram-api-promise@1.0.4 -->
+
+  <!-- 在小程序入口文件中(app.js)，只需调用一次 promisifyAll()方法，即可实现异步 API的 Promise 化 -->
+  import { promisifyAll } from 'miniprogram-api-promise'
+  const wxp = wx.p ={}
+  <!-- promisify all wx's api -->
+  promisifyAll(wx,wxp)
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  3。事件绑定
+  事件绑定用于实现子向父传值，可以传递任何类型的数据。使用步骤如下:
+  <!-- 在父组件的js 中，定义一个函数，这个函数即将通过自定义事件的形式，传递给子组件 -->
+  在父组件中定义 syncCount方法
+  将来，这个方法会被传递给子组件，供子组件进行调用
+  syncCount() {
+    console.log( ' syncCount ' )
+  }
+
+  <!-- 在父组件的wxml中，通过自定义事件的形式，将步骤1中定义的函数引用，传递给子组件 -->
+  使用bind:自定义事件名称（推荐:结构清晰)
+  <my-test3 count="{{count}}" bind:sync="syncCount"></my-test3>
+  或在 bind 后面直接写上自定义事件名称
+  <my-test3 count="{{count}}" bindsync="syncCount"></my-test3>
+
+  <!-- 在子组件的js 中，通过调用this.triggerEvent(自定义事件名称'，{/*参数对象*/})，将数据发送到父组件 -->
+  子组件的 wxml结构
+  <text>子组件中，count值为: ficount}}</text>
+  <button type="primary" bindtap="addCount">+1</button>
+
+  子组件的 js代码
+  methods: {
+    addCount() {
+      this.setData({count: this.properties.count + 1}}
+      this.triggerEvent( ' sync ' , {value: this.properties.count})
+    }
+  }
+
+  <!-- 在父组件的js 中，通过e.detail获取到子组件传递过来的数据 -->
+  syncCount(e) {
+    console.log(e.detail.value)
+    this.setData({
+      count: e.detail.value
+    })
+  }
+    
+</body>
+
+</html>

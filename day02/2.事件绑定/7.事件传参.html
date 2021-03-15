@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  事件传参
+  小程序中的事件传参比较特殊，不能在绑定事件的同时为事件处理函数传递参数。
+  例如，下面的代码将不能正常工作:
+  <button type="primary" bindtap='btnHandler(123)'>事件传参</button>
+  因为小程序会把 bindtap的属性值，统一当作事件名称来处理，相当于要调用一个名称为 btnHandler(123)的事件处理函数。
+
+  <!-- 可以为组件提供data-*自定义属性传参，其中*代表的是参数的名字，示例代码如下: -->
+  <button bindtap="btnHandler" data-info="{{2}}">事件传参</button>
+  最终:
+  info会被解析为参数的名字数值
+  2会被解析为参数的值
+
+  <!-- 在事件处理函数中，通过event.target.dataset.参数名即可获取到具体参数的值 -->
+  示例代码如下:
+  btnHandler(event) {
+  <!-- dataset是一个对象，包含了所有通过data -* 传递过来的参数项 -->
+    console.log(event.target.dataset)
+  <!-- 通过dataset可以访问到具体参数的值 -->
+    console.log(event.target.dataset.info)
+  }
+</body>
+
+</html>

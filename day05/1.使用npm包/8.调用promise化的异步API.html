@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  4。调用Promise化之后的异步API
+  //页面的.wxml结构
+  <van-button type="danger" bindtap="getInfo">vant按钮</van-button>
+  /在页面的﹒js 文件中，定义对应的 tap事件处理函数
+  async getInfo() {
+    const { data: res } = await wx.p.request({
+      method:'GET'，
+      url: 'https : / /www.escook.cn/api/get ' ，
+      data: { name: 'zs ', age: 20 }
+  }
+  console.log(res)},
+
+</body>
+
+</html>

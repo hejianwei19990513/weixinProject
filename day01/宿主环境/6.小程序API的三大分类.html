@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  小程序API概述
+  小程序中的API是由宿主环境提供的，通过这些丰富的小程序API，开发者可以方便的调用微信提供的能力，例如:获取用户信息、本地存储、支付功能等。
+
+  小程序API的3大分类
+  小程序官方把API分为了如下3大类:
+  <!-- 事件监听API -->
+  特点:以on开头，用来监听某些事件的触发
+  举例: wx.onWindowResize(function callback)监听窗口尺寸变化的事件
+
+  <!-- 同步API -->
+  特点1:以 Sync 结尾的API都是同步API
+  特点2:同步API的执行结果，可以通过函数返回值直接获取，如果执行出错会抛出异常●举例:wx.setStorageSync('key', 'value')向本地存储中写入内容
+
+  <!-- 异步API -->
+  特点:类似于jQuery 中的$.ajax(options)函数，需要通过success、fail、complete接收调用的结果举例: wx.request()发起网络数据请求，通过success回调函数接收数据
+
+</body>
+
+</html>

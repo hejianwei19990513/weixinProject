@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 算术运算 -->
+  页面的数据如下:
+  <script>
+    Page({
+      data: {
+        randomNum: Math.random().toFixed(2) // 生成一个带两位小数的随机数，例如0.34
+      }
+    })
+  </script>
+  页面的结构如下:
+  <view>生成100以内的随机数;{{randomNum *100}}</view>
+</body>
+
+</html>

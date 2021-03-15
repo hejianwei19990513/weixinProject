@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  属性绑定
+  属性绑定用于实现父向子传值，而且只能传递普通类型的数据，无法将方法传递给子组件。
+  <!-- 父组件的示例代码如下: -->
+  父组件的data节点
+  data: {
+    count: 0
+  }
+  父组件的wxml结构
+  <my-test3 count="{{count}} "></my-test3>
+  <view>~~~~</view>
+  <view>父组件中，count值为: {{count}}</view>
+
+  <!-- 子组件在properties节点中声明对应的属性并使用。示例代码如下: -->
+  子组件的properties节点
+  properties: {
+    count: Number
+  }
+  子组件的 wxml结构
+  <text>子组件中，count值为: {{count}}</text>
+    
+  <!-- 注意:
+    子组件让子组件的count值自增时并不会影响父组件count值，   
+    但是父组件让父组件的count值自增时会影响子组件count值
+   -->
+
+</body>
+
+</html>

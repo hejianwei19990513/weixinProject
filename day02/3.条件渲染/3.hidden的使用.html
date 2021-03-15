@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  3. hidden
+  在小程序中，直接使用hidden="{{ condition }}"也能控制元素的显示与隐藏:
+  <block hidden="{{true}}">
+    <view> view1</view>
+    <view> view2 </view>
+  </block>
+  注意这样并不会使两个view组件一起隐藏，只会使本来就不会渲染出来的<block>隐藏（相当于什么都没做）
+</body>
+
+</html>

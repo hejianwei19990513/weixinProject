@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 1.与JavaScript不同 -->
+  为了降低wxs (Weixin Script)的学习成本，wxs语言在设计时借大量鉴了JavaScript 的语法。但是本质上，Wxs和JavaScript是完全不同的两种语言!
+
+  <!-- 2。不能作为组件的事件回调 -->
+  wxs 典型的应用场景就是“过滤器”，经常配合Mustache语法进行使用，例如
+  <view>{{m2.toLower(country)}}</view>
+
+  但是，在 wxs 中定义的函数不能作为组件的事件回调函数。例如，下面的用法是错误的:
+  <button bindtap="m2 .toLower">按钮</button>
+
+  <!-- 3.隔离性 -->
+  隔离性指的是 wxs的运行环境和其他JavaScript代码是隔离的。体现在如下两方面:
+  wxS 不能调用js 中定义的函数
+  wxs 不能调用小程序提供的API
+
+  <!-- 4.性能好 -->
+  在iOS设备上，小程序内的wXS会比JavaScript代码快2~20倍
+  在android设备上，二者的运行效率无差异
+
+</body>
+
+</html>

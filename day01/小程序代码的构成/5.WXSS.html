@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  1.什么是WXSS
+  wXSS (WeiXin Style Sheets)是一套样式语言，用于描述WXML的组件样式,类似于网页开发中的CSS。
+
+  2.wXSS和CSS的区别
+
+  <!-- 新增了rpx尺寸单位 -->
+  CSS中需要手动进行像素单位换算，例如rem
+  wXSS在底层支持新的尺寸单位rpx，在不同大小的屏幕上小程序会自动进行换算
+
+  <!-- 提供了全局的样式和局部样式 -->
+  项目根目录中的app.wxSs会作用于所有小程序页面
+  局部页面的.wxss样式仅对当前页面生效
+
+  <!-- wXSS仅支持部分CSS选择器 -->
+  .class和#id
+  element
+  并集选择器、后代选择器
+  ::after和 ::before等伪类选择器
+
+</body>
+
+</html>

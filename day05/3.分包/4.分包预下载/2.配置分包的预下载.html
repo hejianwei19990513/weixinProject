@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  2。配置分包的预下载
+  预下载分包的行为，会在进入指定的页面时触发。在 app.json 中，使用preloadRule节点定义分包的预下载规则，示例代码如下:
+  <script>
+    var json = {
+      "preloadRule": { // 分包预下载的规则
+        "pages/contact/contact": {
+          //触发分包预下载的页面路径ll network表示在指定的网络模式下进行预下载，
+          //可选值为: all〈不限网络）和 wifi（仅 wifi模式下进行预下载> 1 / 默认值为: wifi
+          "network": "all",
+          // packages表示进入页面后，预下载哪些分包
+          //可以通过root或name指定预下载哪些分包
+          "packages": ["pkgA"]
+        }
+      }
+
+    }
+  </script>
+</body>
+
+</html>

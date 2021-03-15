@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 启用多个插槽 -->
+  在小程序的自定义组件中，需要使用多<slot>插槽时，可以在组件的.js文件中，通过如下方式进行启用。示例代码如下:
+  Component({
+    options: {
+      multipleSlots: true <!-- 在组件定义时的选项中启用多slot支持 -->
+    }，
+    properties: { /* ...*/ }，methods: { /* ... */ }
+  }
+
+  <!-- 多个插槽 -->
+  可以在组件的.wxml中使用多个<slot>标签，以不同的name 来区分不同的插槽。示例代码如下:
+    <!-- 组件模板-->
+      <view class="wrapper">
+      <!-- name为 before的第一个slot插槽-->
+      <slot name="before"></slot>
+
+      <view>这是一段固定的文本内容</view>
+      
+      <!-- name为 after 的第二个slot插槽 -->
+      <slot name="after"></slot>
+    </view>
+
+    <!--引用组件的页面模板-->
+    <component-tag-name>
+      <!--这部分内容将被放置在组件<slot name="before">的位置上-->
+      <view slot="before">这里是插入到组件slot name="before"中的内容</view>
+      <!--这部分内容将被放置在组件<slot name="after">的位置上 -->
+      <view slot="after">这里是插入到组件slot name="after"中的内容</view>
+    </component-tag-name>
+  
+    
+</body>
+
+</html>

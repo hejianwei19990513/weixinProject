@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  结合<block>使用wx:if
+    如果要一次性控制多个组件的展示与隐藏，可以使用一个<block></block>标签将多个组件包装起来，并在<block>标签上使用wx: if 控制属性，示例如下:
+      <block wx:if="{itrue}">
+        <view> view1</view>
+        <view> view2 </view>
+      </block>
+  注意: <block>并不是一个组件，它只是一个包裹性质的容器，不会在页面中做任何渲染。
+
+
+</body>
+
+</html>

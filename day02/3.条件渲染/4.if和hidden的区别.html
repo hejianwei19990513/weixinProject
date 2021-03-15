@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  4.wx:if 与hidden的对比
+  <!-- 运行方式不同 -->
+  wx:if以动态创建和移除元素的方式，控制元素的展示与隐藏
+  hidden以切换样式的方式（display: none/block; )，控制元素的显示与隐藏
+  
+  <!-- 使用建议 -->
+  频繁切换时，建议使用hidden
+  控制条件复杂时，建议使用wx:if 搭配wx:elif、wx:else进行展示与隐藏的切换
+
+</body>
+
+</html>

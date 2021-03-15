@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  3。监听对象属性的变化
+  数据监听器支持监听对象中单个或多个属性的变化，示例语法如下:
+  
+  Component({
+    data: {
+      rgba: {
+        r: 0,
+        g: 0,
+        b: 0
+      },
+      color: '0,0,0'
+    },
+    observers: {
+      <!-- 侦听对象指定属性 -->
+      "rgba.r,rgba.g,rgba,b': function(r,g,b){
+        <!-- 触发此监听器的3种情况: -->
+        <!-- 【为属性A赋值】使用setData设置 this.data.对象.属性A时触发 -->
+        <!-- 【为属性B赋值】使用setData设置this.data.对象.属性B时触发 -->
+        <!-- 【直接为对象赋值】使用setData设置this.data.对象时触发  -->
+        this.setdata({
+          color: `${r},${g},${b}`
+        })
+    }
+  }}
+  Component({
+    observers: {
+      <!-- 侦听对象所有属性 -->
+      "rgb.**': function(obj){
+        <!-- 触发此监听器的3种情况: -->
+        <!-- 【为属性A赋值】使用setData设置 this.data.对象.属性A时触发 -->
+        <!-- 【为属性B赋值】使用setData设置this.data.对象.属性B时触发 -->
+        <!-- 【直接为对象赋值】使用setData设置this.data.对象时触发  -->
+        this.setdata({
+          color: `${obj.r},${obj.g},${obj.b}`
+        })
+    }
+  }}
+    
+</body>
+
+</html>

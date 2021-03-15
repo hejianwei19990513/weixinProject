@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  2.定义外联的wxs脚本
+  wxs代码还可以编写在以.wxs 为后缀名的文件内，就像javascript代码可以编写在以.js 为后缀名的文件中一样。示例代码如下:
+
+  tools.wxs文件
+  function toLower(str){
+    return str.toLowerCase()
+  }
+  module.exports = {
+    toLower: toLower
+  }
+
+  3.使用外联的wxs脚本
+  在wxml中引入外联的 wxs脚本时，必须为<wxs>标签添加module和src属性，其中:
+  module用来指定模块的名称
+  src用来指定要引入的脚本的路径，且必须是相对路径
+  示例代码如下:
+  <!--调用m2模块中的方法-->
+  <view>{{m2.toLower(country)}}</view>
+  <!--引用外联的 tools.wxs 脚本，并命名为m2 -->
+  <wxs src="../ ../utils/tools.wxs" module="m2"></wxs>
+
+</body>
+
+</html>

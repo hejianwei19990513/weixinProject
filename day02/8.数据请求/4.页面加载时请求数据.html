@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  5.在页面刚加载时请求数据
+  在很多情况下，我们需要在页面刚加载的时候，自动请求一些初始化的数据。此时需要在页面的onLoad事件中调用获取数据的函数，示例代码如下:
+  <script>
+    onLoad: {
+      this.getSwiperList()
+      this.getGridList()
+    }
+  </script>
+
+</body>
+
+</html>

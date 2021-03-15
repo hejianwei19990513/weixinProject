@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  5.定制全局主题样式
+  Vant Weapp使用CSS变量来实现定制主题。关于CSS变量的基本用法，请参考MDN文档:https://developer.mozilla.org/zh-CN/docs/Web/CsS/using_css_custom_properties
+
+  在app.wxss中，写入CSS变量，即可对全局生效:
+  /* app.wxss */
+  page {
+  /*定制警告按钮的背景颜色和边框颜色*/
+  --button-danger-background-color:#CO0000;
+  --button-danger-border-color:#D60000;
+  }
+
+</body>
+
+</html>

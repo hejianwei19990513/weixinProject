@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- Mustache语法的主要应用场景如下: -->
+  绑定内容
+  绑定属性
+  运算（三元运算、算术运算等)
+
+  <!-- 动态绑定属性 -->
+  页面的数据如下:
+  <script>
+    Page({
+      data: {
+        imgSrc: 'http : / /www.itheima. com/ images/ logo.png'
+      }
+    })
+  </script>
+  页面的结构如下:
+  注意，在vue里面这里动态绑定属性要写成:src="{{imgSrc}"要在src前面写":"
+  <image src="{{imgSrc}"></image>
+</body>
+
+</html>

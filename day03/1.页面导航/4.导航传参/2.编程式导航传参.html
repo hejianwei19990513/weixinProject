@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  2。编程式导航传参
+  调用wx.navigateTo(Object object)方法跳转页面时，也可以携带参数，代码示例如下:
+  //页面结构
+  <button bindtap="gotoInfo2">跳转到info页面</button>
+  //通过编程式导航，跳转到info页面,并携带参数
+  gotoInfo2() {
+    wx.navigateTo({
+      url: '/pages/info?infoname=ls&gender=男'
+    })
+  }
+
+
+</body>
+
+</html>

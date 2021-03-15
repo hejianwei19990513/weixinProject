@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  5.bindtap的语法格式
+  在小程序中，不存在HTML中的onclick鼠标点击事件，而是通过tap事件来响应用户的触摸行为。
+  通过bindtap，可以为组件绑定tap触摸事件，语法如下:
+  <button type="primary" bindtap="btnTapHandler">按钮</button>
+
+  在页面的.js文件中定义对应的事件处理函数，事件参数通过形参event(一般简写成e〉来接收:
+  <script>
+    Page({
+      btnTapHandler(e) {
+        // 按钮的 tap事件处理函数
+        console.log(e) // 事件参数对象e
+      }
+    })
+  </script>
+</body>
+
+</html>

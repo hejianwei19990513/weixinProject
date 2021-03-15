@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  2.创建MobX的Store实例
+  <script>
+    import { observable, action } from 'mobx-miniprogram'
+    export const store = observable({
+      //数据字段
+      numA: 1,
+      numB: 2,
+      // 计算属性
+      get sum() {
+        return this.numA + this.numB
+      },
+      //actions方法，用来修改store中的数据
+      updateNum1: action(function (step) {
+        this.numA += step
+      }),
+      updateNum2: action(function (step) {
+        this.numB += step
+      }),
+    })
+  </script>
+
+
+</body>
+
+</html>

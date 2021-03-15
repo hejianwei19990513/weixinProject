@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  5。使用setData修改properties的值
+  由于data数据和properties属性在本质上没有任何区别，因此 properties属性的值也可以用于页面渲染，或使用setData为properties 中的属性重新赋值，示例代码如下:
+  在组件的 .wxml 文件中使用properties属性的值
+  <view>max属性的值为:{{max}}</view>
+
+  Component({
+    properties: { max: Number }，
+    methods: {
+      addCount() {
+       this.setData({ max: this.properties.max + 1 })<!-- 使用setData修改属性的值 -->
+      }
+    }
+  })
+</body>
+
+</html>

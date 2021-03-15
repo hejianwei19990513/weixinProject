@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  6.页面的生命周期函数
+  小程序的页面生命周期函数需要在页面的.js文件中进行声明，示例代码如下:
+
+  //页面的 .js 文件
+  Page({
+    onLoad : function(options) { }，监听页面加载，一个页面只调用1次
+    
+    onShow: function() { },监听页面显示
+
+    onReady : function() { },监听页面初次渲染完成，一个页面只调用1次
+
+    onHide : function() { }，监听页面隐藏
+
+    onUnload: function() { },监听页面卸载，一个页面只调用1次
+  }
+    
+</body>
+
+</html>

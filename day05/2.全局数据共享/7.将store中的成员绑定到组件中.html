@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    import { storeBindingsBchavior } from 'mobx-miniprogram-bindings'
+    import { store } from '../../store/store'
+    Component({
+      behaviors: [storeBindingsBehavior], // 通过 storeBindingsBehavior 来实现自动绑定
+      storeBindings: {
+        store, //指定要绑定的
+        fields: {// 指定要绑定的字段数据
+          numA: () => store.numA,//绑定字段的第1种方式
+          numB: (store) => store.numB,// 绑定字段的第2种方式
+          sum: 'sum '// 绑定字段的第3种方式
+        },
+        actions: {
+          //指定要绑定的方法
+          updateNum2: "updateNum2"
+        }
+      },
+    })
+  </script>
+</body>
+
+</html>

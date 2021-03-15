@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  3.使用Vant组件
+  安装完Vant组件库之后，可以在app.json的usingComponents节点中引入需要的组件，即可在wxml中直接使用组件。示例代码如下:
+
+  //app.json
+  "usingComponents": {
+    "van-button" : "@vant/weapp/ button/ index"
+  }
+  //页面的.wxml结构
+  <van-button type="primary">按钮</van-button>
+
+</body>
+
+</html>

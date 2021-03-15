@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  2.单个插槽
+  在小程序中，默认每个自定义组件中只允许使用一个<slot>进行占位，这种个数上的限制叫做单个插槽。
+    <!--组件的封装者-->
+    <view class="wrapper">
+      <view>这里是组件的内部节点</view>
+      <!--对于不确定的内容，可以使用<slot>进行占位，具体的内容由组件的使用者决定-->
+      <slot></slot>
+    </view>
+
+    <!-- 组件的使用者-->
+    <component-tag-name>
+      <!--这部分内容将被放置在组件<slot>的位置上-->
+      <view>这里是插入到组件slot中的内容</view>
+    </component-tag-name>
+
+</body>
+
+</html>

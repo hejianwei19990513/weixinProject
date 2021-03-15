@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  3. properties属性
+  在小程序组件中，properties是组件的对外属性，用来接收外界传递到组件中的数据，示例代码如下:
+
+  Component({
+    properties: {
+      <!-- 完整定义属性的方式【当需要指定属性默认值时，建议使用此方式】 -->
+      max: {
+      type: Number，<!-- 属性值的数据类型 -->
+      value: 101<!-- 属性默认值 -->
+      }，
+      max: Number<!-- 简化定义属性的方式【不需指定属性默认值时，可以使用简化方式】 -->
+    }
+  })
+  <my-test1 max="10"></my-test1>
+</body>
+</html>

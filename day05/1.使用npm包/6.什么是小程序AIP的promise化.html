@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 1.基于回调函数的异步API的缺点 -->
+  默认情况下，小程序官方提供的异步API都是基于回调函数实现的，例如，网络请求的API需要按照如下的方式调用:
+  Wx.request({
+    method: ""，ur1: ''，data: { },
+    success: (-→>{ }，//请求成功的回调函数
+    fail:()→>{},1/请求失败的回调函数
+    complete: ()=→>{}I/请求完成的回调函数
+  })
+  缺点:容易造成回调地狱的问题，代码的可读性、维护性差!
+
+  <!-- 2.什么是API Promise化 -->
+  API Promise化，指的是通过额外的配置，将官方提供的、基于回调函数的异步APIl，升级改造为基于Promise 的异步API，从而提高代码的可读性、维护性，避免回调地狱的问题.
+
+</body>
+
+</html>

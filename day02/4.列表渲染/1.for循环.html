@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- wx:for循环 -->
+  <view wx:for="{{list}}" wx:key="index" wx:for-item="items" wx:for-index="num">{{items + num}}</view>
+  wx:for-item可以修改循环项的变量名（不写的话默认变量名是item）
+  wx:for-index可以修改循环项的索引号（不写的话默认变量名是index）
+  wx:key与vue里面的v-for循环的:key="index"一样
+</body>
+</html>

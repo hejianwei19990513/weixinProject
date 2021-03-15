@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  1。导航到tabBar页面
+  调用wx.switchTab(Object object)方法，可以跳转到tabBar页面。
+
+  //页面结构
+  <button bindtap="gotoMessage">跳转到消息页面</button>
+  //通过编程式导航,跳转到message页面
+  gotoMessage() {
+    wx.switchTab({
+      url: '/pages/message/message'
+    })
+  }
+
+
+</body>
+
+</html>

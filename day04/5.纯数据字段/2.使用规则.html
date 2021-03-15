@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  2。使用规则
+  在Component构造器的options节点中，指定 pureDataPattern为一个正则表达式，字段名符合这个正则表达式的字段将成为纯数据字段，示例代码如下:
+  Component({
+    options: {
+      <!-- 指定所有―_开头的数据字段为纯数据字段 -->
+      pureDataPattern: /^_/
+    },
+    data: {
+      a: true,<!-- 普通数据字段 -->
+      _b: true,<!-- 纯数据字段 -->
+    }
+  })
+</body>
+
+</html>

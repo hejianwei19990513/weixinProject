@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  3.后退导航
+  如果要后退到上一页面或多级页面，则需要指定open-type属性和delta 属性，其中:
+  open-type的值必须是navigateBack，表示要进行后退导航
+  delta 的值必须是数字，表示要后退的层级
+  <navigator open-type='navigateBack' delta='1'>返回上一页</navigator>
+  <!-- 注意:为了简便，如果只是后退到上一页面，则可以省略delta 属性，因为其默认值就是1。 -->
+
+</body>
+
+</html>

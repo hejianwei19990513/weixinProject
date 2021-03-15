@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 引用组件 -->
+  组件的引用方式分为“局部引用”和“全局引用”，顾名思义:
+  局部引用:
+  组件只能在当前被引用的页面内使用
+  全局引用:
+  组件可以在每个小程序页面中使用
+
+  <!-- 局部引用组件 -->
+  在页面的.json配置文件中引用组件的方式，叫做“局部引用”。示例代码如下:
+  在页面的.json文件中，引入组件
+  {
+    "usingComponents": {
+      "my-test1":"/components/test1/test1"
+    }
+  }
+  在页面的 .wxml 文件中，使用组件
+  <my-test1></my-test1>
+    
+  <!-- 全局引用组件 -->
+  在 app.json 全局配置文件中引用组件的方式，叫做“全局引用”。示例代码如
+  在app.json文件中，引入组件
+  {
+    "pages":{/*省略不必要的代码*/ }，
+    "window" : {/*省略不必要的代码*/ },
+    "usingComponents": {
+      "my-test2" : "/components/test2/test2"
+    }
+  }
+  在页面的 .wxml 文件中，使用组件
+  <my-test2></my-test2>
+    
+</body>
+
+</html>
